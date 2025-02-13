@@ -1,0 +1,4 @@
+use bddSound;
+ALTER TABLE compte ADD COLUMN token VARCHAR(64) NULL;
+ALTER TABLE compte ADD COLUMN timestamp INT NULL DEFAULT 0 AFTER token;
+
