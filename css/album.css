@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,900');
+
+html, body{/*style de la page*/
+    margin: 0; padding: 0;
+    background-color: #cee8f7;
+    font-family: 'Lato';
+    flex-direction:column;
+}
+/*################################################################################*/
+/*page*/
+
+
+.title{
+	display:flex;
+	text-decoration: none;
+    color:#699bf7;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    
+}
+
+.element{ /* titre, pseudo, date, style*/
+    position: absolute;
+	text-decoration: none;
+    color:#699bf7;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-left: 65%;
+    top: 65%;   
+}
+
+.image{/*album*/
+    position: absolute;
+    left: 65%;
+    top: 20%;
+    height: auto;
+    width: auto;
+    height: auto;
+}
+
+.image img{
+    max-width: 250px;
+}
+
+
+
+
+/*################################################################################"*/
+/*telephone   si la taille est inférieure a 780px*/
+@media screen and (max-width: 780px) {
+	header {
+		flex-direction:column;
+	}
+
+    .artiste-container{
+        display: flex;
+        left: 2%;
+    }
+
+    .image{
+        left: 5%;
+    }
+    
+    .element{
+        margin-left: 5%;
+        top: 50%;   
+    }
+
+    .all-music{
+        margin-top: 500px;
+        top: 60%; 
+        margin-bottom: 80px;
+    }
+}
+
+
+.flex{
+    flex-direction:column;
+}
+
+
+
+/*################################################################################"*/
+/*scrollbar  (invisible)*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  
+  *::-moz-scrollbar {
+    width: 0px;
+    background-color: transparent;
+  }
+  
+  body::-webkit-scrollbar{
+    display: none;
+  }
+
+/*################################################################################"*/
+/*music (item de musique (image, titre, artiste, add, like, play)*/     /*code qui aurait pu etre inclu*/
+
+  .list-card-music {/* <ol>  (comprend toutes cette section)    (plusieurs carte)*/
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: music;
+    box-sizing: border-box;
+}
+
+.list-card-music > li::before {/* 1 carte*/
+    content: counter(music) '.';
+    width: 30px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+
+
+
+.list-card-music > li {
+/*flex-basis: calc(50% - 20px);*/
+flex-basis: 60%;
+display:flex;
+align-items: center;
+counter-increment: music;
+}
+
+.card-music {
+    background-color: white;
+    display: flex;
+    width: 100%;
+}
+
+.card-music-description {/*titre & artiste (texte)*/
+    flex:1;
+display: flex;
+}
+
+.card-music-description--cover {/*image de couverture*/
+width: 100px; height: 100px; flex-shrink: 0;
+}
+
+.card-music-description--cover img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+
+.card-music-actions {/* add, like, play     (images)*/
+    flex:0;
+    padding: 1rem;
+    display: flex;
+}
+
+.card-music-actions ul { 
+    margin: 0;
+    padding: 0;
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.card-music-actions ul li img {
+ width: 50px;
+ height: auto;
+
+}
+
+/*###############################*/
+/*heart    (rouge ou vide)*/
+
+.add-favorite {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("../html/image/heart.png");
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+ } 
+ .add-favorite.added {
+    background-image: url("../html/image/red_heart.png");
+ }
+
+   /*#####################################################################*/
+  /*javascript play/pause*/
+ .countPlay {
+    display: block;
+    width: 45px;
+    height: 45px;
+    /*background-image: url("../html/image/play.png");*/
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+ } 
+  .play-music3 {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("../html/image/play.png");
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+ } 
+ .add-favorite.play {
+    background-image: url("../html/image/pause.png");
+ }

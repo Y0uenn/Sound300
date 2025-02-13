@@ -1,0 +1,182 @@
+/* source : https://www.youtube.com/watch?v=YvJiI2C1mAk */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #cee8f7;
+}
+
+#main {/*contient le questionnaire*/
+    /*width: 640px;
+    height: 84%;*/
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+	background: white;
+	padding: 2rem;
+}
+
+.titleBox {/*nom du champ*/
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleBox h1 {
+    color: Black;
+    margin: 0;
+	font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.titleBox h2 {
+    color: #699bf7;
+    font-size: 20px;
+    margin: 3px 0;
+}
+
+.inputBox {
+    width: 100%;
+    height: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	
+}
+
+.input {
+    width: 90%;
+    height: 28px;
+    border: 1px solid rgb(200, 200, 200);
+    outline: none;
+    font-weight: lighter;
+    padding: 1px 10px;
+    padding-left: 35px;
+    color: rgb(94, 94, 94);
+    font-size: 15px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.input[type=email] {
+    background: url("image/mail2.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position-x: 3px;
+    background-position-y: 3px;
+    outline: none;
+}
+
+.input[type=password] {
+    background: url("image/key.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+
+.input[type=text] {
+    background: url("image/name.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+
+.input[type=date] {
+    background: url("image/calendar.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+
+.input[type=file] {
+    /*background: url("image/calendar.svg");*/
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+
+.input:focus {
+    border-color: blue;
+}
+
+.inputName {
+    font-size: 16px;
+    color: #699bf7;
+    margin-top: -44px;
+    background-color: white;
+    padding: 0 10px;
+    user-select: none;
+}
+
+.btn {
+    width: 300px;
+    padding: 15px 20px;
+    margin-top: 50px;
+    background: #699bf7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: blue;
+    background-color: rgb(244, 244, 244);
+}
+
+.switchPage {
+    display: flex;
+    margin-top: 20px;
+}
+
+.switchPage p {
+    margin: 0;
+    color: rgb(100, 100, 100);
+    font-size: 15px;
+    margin-right: 3px;
+}
+
+.switchPage a {
+    margin: 0;
+    font-size: 15px;
+}
+
+.bouton{
+		background: #699bf7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/*################################################################################"*/
+/*telephone*/
+@media screen and (max-width: 780px) {
+	#main {
+		width: 80%;
+	}
+}

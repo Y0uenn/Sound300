@@ -1,0 +1,152 @@
+html, body{/*style de la page*/
+    margin: 0; padding: 0;
+    background-color: #cee8f7;
+    font-family: 'Lato';
+    
+}
+.player{ /*bouton player musique*/
+    position: absolute;
+    top:50%;
+    left:60%;
+    width: 200pX;
+    border-radius: 15px 15px 15px 15px;
+    background: white;
+    box-shadow: 0 50px 80px rgba(0,0,0,0.25);
+}
+.player .imgBox{
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+.player .imgBox img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+.player audio{
+    width: 100%;
+    outline: none;
+}
+
+
+
+
+/*######################################""*/
+/*carte de musique     Merci M.Lorentz     */
+
+.list-card-music {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: music;
+    box-sizing: border-box;
+}
+
+.list-card-music > li::before {
+    content: counter(music) '.';
+    width: 30px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+
+
+
+.list-card-music > li {
+flex-basis: calc(50% - 20px);
+display:flex;
+align-items: center;
+counter-increment: music;
+}
+
+.card-music {
+    background-color: white;
+    display: flex;
+    width: 100%;
+}
+
+.card-music-description {
+    flex:1;
+display: flex;
+}
+
+.card-music-description--cover {
+width: 100px; height: 100px; flex-shrink: 0;
+}
+
+.card-music-description--cover img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+
+.card-music-actions {
+    flex:0;
+    padding: 1rem;
+    display: flex;
+}
+
+.card-music-actions ul { 
+    margin: 0;
+    padding: 0;
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.card-music-actions ul li img {
+ width: 50px;
+ height: auto;
+cursor: pointer;
+}
+
+
+   /*#####################################################################*/
+  /*heart (red void)*/
+
+ .add-favorite {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("../html/image/heart.png");
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+ } 
+ .add-favorite.added {
+    background-image: url("../html/image/red_heart.png");
+ }
+
+
+@media screen and (max-width:900px) {
+    .list-card-music > li {
+        flex:1;
+    }
+    
+}
+
+
+   /*#####################################################################*/
+  /*javascript (play pause)*/
+  .play-music3 {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("../html/image/play.png");
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+ } 
+ .add-favorite.play {
+    background-image: url("../html/image/pause.png");
+ }

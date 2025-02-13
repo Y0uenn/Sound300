@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,900');
+
+html, body{/*style de la page*/
+    margin: 0; padding: 0;
+    background-color: #cee8f7;
+    font-family: 'Lato';
+    flex-direction:column;
+}
+
+
+/*################################################################################*/
+/*page*/
+
+
+.title{
+	display:flex;
+	text-decoration: none;
+    color:#699bf7;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    
+}
+
+.element{/*album, name, creation, title*/
+    position: absolute;
+	text-decoration: none;
+    color:#699bf7;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-left: 5%;
+    top: 65%;
+    
+}
+
+.image{/*musique*/
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+.image img{
+  max-width: 300px;
+}
+
+.title2 {
+    position: absolute;
+	text-decoration: none;
+    color:#699bf7;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 5%;
+    top: 20%;
+    left: 30%;
+}
+
+
+
+
+/*################################################################################"*/
+/*telephone*/
+@media screen and (max-width: 900px) {
+	header {
+		flex-direction:column;
+	}
+
+    .image{
+        top: 40%;
+    }
+
+    .element{
+        top: 85%;
+        
+    }
+    .title2 {
+        left: 5%;
+    }
+}
+
+
+.flex{
+    flex-direction:column;
+}
+
+/*################################################################################"*/
+/*scrollbar*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  
+  *::-moz-scrollbar {
+    width: 0px;
+    background-color: transparent;
+  }
+  
+  body::-webkit-scrollbar{
+    display: none;
+  }
+
+
+  /*#####################################################################*/
+  /*javascript*/
+  .play-music2 {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url("../html/image/play.png");
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+ } 
+ .add-favorite.play {
+    background-image: url("../html/image/pause.png");
+ }

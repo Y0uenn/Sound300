@@ -1,0 +1,42 @@
+<div class="search" id="searchWrapper">
+    <div class="button-group">
+      <button id="button1" class="toggle-button active" onclick="music()">music</button>
+      <button id="button2" class="toggle-button" onclick="artiste()">artiste</button>
+      <button id="button3" class="toggle-button"onclick="album()">album</button>
+    </div>
+    
+    <input type="text" id="input_search" onkeyup="search()">
+    <button><img src="../html/image/search.png"></button>
+    
+    <div class="group-button-search">
+      <button id="result1" class="boutton-result" style="display: none;">result 1</button>
+      <button id="result2" class="boutton-result" style="display: none;">result 2</button>
+      <button id="result3" class="boutton-result" style="display: none;">result 3</button>
+      <button id="result4" class="boutton-result" style="display: none;">result 4</button>
+      <button id="result5" class="boutton-result" style="display: none;">result 5</button>
+      <button id="result6" class="boutton-result" style="display: none;">...</button>
+    </div>
+  
+</div>
+<header>
+  <div class="logo hover-3">Sound 3000</div>
+  
+  
+    <nav >
+      <ul>
+        <li><a href="token.php?path=../php/index.php" class="link">Home</a></li>
+        <li><a href="token.php?path=../php/favorites.php" class="link">Favorites</a></li>
+        <li><a href="token.php?path=../php/history.php" class="link">History</a></li>
+        <li><a href="" id="searchBtn"><img src="../html/image/search.png"></a></li>
+      </ul>
+    </nav>
+    <nav class="connexion">
+      <ul>
+        <li><a href="token.php?path=../php/profil.php"><img src="../html/image/profil.png"></a></li>
+        <li><a href="./connection.php?reset=1"><img src="../html/image/exit.png"></a></li>
+      </ul>
+    </nav>
+</header>
+
+<script src="../js/ajax.js" defer></script>
+<script src="../js/header.js" defer></script>
